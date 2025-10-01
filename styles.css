@@ -2,7 +2,8 @@
     --header-color:rgb(252, 220, 194);
     --background-color:rgb(235, 199, 169);
     --text-color:black;
-    --hover-color:brown;
+    --hover-color:blue;
+    
 }
 html{
     background-color: var(--background-color);
