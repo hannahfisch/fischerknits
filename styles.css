@@ -1,0 +1,149 @@
+:root{
+    --header-color:rgb(252, 220, 194);
+    --background-color:rgb(235, 199, 169);
+    --text-color:black;
+    --hover-color:brown;
+}
+html{
+    background-color: var(--background-color);
+}
+h1 {
+    margin:auto;
+    color:var(--text-color);
+}
+h2 {
+    text-align: center;
+    color:var(--text-color);
+}
+h3 {
+    color:var(--text-color);
+    
+}
+p {
+    font-size:20px;
+}
+.container{
+    display:flex;
+    justify-content:center;
+    background-color:rgb(200 213 231);
+}
+.grid-content{
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: repeat(12,1fr);
+    max-width: 1024px;
+    background-color:var(--background-color);
+}
+header {
+    grid-column:1/-1;
+    grid-row:1;
+    position: sticky;
+    top:0;
+    background-color: var(--header-color);
+}
+#namelogo{
+    grid-column: span 8/11;
+    text-align:center;
+    font-size:larger;
+}
+#namelogo img{
+    width: 60px;
+    height: 30px;
+}
+.image {
+    border-style: solid;
+    float:right;
+    margin:5px;
+    width: 240px;
+    height: 215px;
+}
+#content{
+    display:flex;
+    flex-direction: column; 
+}
+nav{
+    display:flex;
+    flex-direction:row-reverse;
+    margin-right:8px;
+}
+nav ul{
+    list-style-type: none;
+}
+.fundamental{
+    color:var(--text-color);
+    text-decoration:none;
+}
+.fundamental:hover{
+    color: var(--hover-color);
+    cursor:pointer;
+    transition: color 0.3s ease;
+}
+.gallery{
+    color:var(--text-color);
+    text-decoration:none;
+}
+.gallery:hover{
+    color:var(--hover-color);
+    cursor:pointer;
+    transition:color 0.3s ease;
+}
+body{
+    display:block;
+    margin-top:0%;
+    margin-right:0%;
+    margin-left:0%;
+    margin-bottom:0%;
+}
+main{
+    grid-column:2/12;
+    grid-row:2;
+    display:block;
+    margin:8px;
+}
+#gallery img {
+    width: 276px;
+    height: 320px;
+}
+footer{
+    grid-column:1/-1;
+    grid-row:3;
+    margin-bottom:8px;
+}
+.contact{
+    float:right;
+    border-top: 20px;
+    grid-column:11;
+    
+}
+.contact:hover{
+    color:var(--hover-color);
+    cursor:pointer;
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+
+.footerGrid{
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    grid-template-columns:repeat(12,1fr);
+}
+.me{
+    grid-column:span 3/9;
+    align-self:end;
+    text-align:center;
+}
+.photocreds{
+    margin-left:8px;
+    grid-column:span 6/5;
+    align-self:end;
+}
+@media screen and (max-width: 750px){
+    html{
+        font-size:16px;
+    }
+    header{
+        flex-direction:column;
+    }
+}
+
